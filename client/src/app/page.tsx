@@ -6,7 +6,7 @@ const GAMES = [
   { id: "truco", name: "Truco Argentino", active: true, color: "from-blue-500 to-indigo-600", icon: "🃏", players: "1.2k" },
   { id: "ajedrez", name: "Ajedrez", active: true, color: "from-gray-700 to-gray-900", icon: "♟️", players: "450" },
   { id: "tenis", name: "Tenis Arcade", active: false, color: "from-green-400 to-emerald-600", icon: "🎾", players: "-" },
-  { id: "trivia", name: "Trivia Quiz", active: false, color: "from-purple-500 to-pink-600", icon: "🧠", players: "-" },
+  { id: "trivia", name: "Trivia Quiz", active: true, color: "from-purple-500 to-pink-600", icon: "🧠", players: "800" },
   { id: "autos", name: "Carreras 3D", active: false, color: "from-red-500 to-orange-600", icon: "🏎️", players: "-" },
   { id: "damas", name: "Damas", active: true, color: "from-amber-600 to-red-800", icon: "🔴", players: "120" },
   { id: "penales", name: "Penales", active: false, color: "from-sky-400 to-blue-600", icon: "⚽", players: "-" },
@@ -121,6 +121,9 @@ export default function ArcadeWorldHub() {
                 )}
                 {game.id === 'damas' && (
                   <Link href="/damas" className="absolute inset-0 z-10"></Link>
+                )}
+                {game.id === 'trivia' && (
+                  <Link href="/trivia" className="absolute inset-0 z-10"></Link>
                 )}
               </div>
             ))}
