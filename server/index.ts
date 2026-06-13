@@ -10,6 +10,7 @@ import { LobbyRoom } from "./rooms/LobbyRoom";
 import { ChessRoom } from "./rooms/ChessRoom";
 import { CheckersRoom } from "./rooms/CheckersRoom";
 import { TriviaRoom } from "./rooms/TriviaRoom";
+import { PingPongRoom } from "./rooms/PingPongRoom";
 
 const port = Number(process.env.PORT || 2567);
 const app = express();
@@ -31,6 +32,7 @@ gameServer.define('truco', TrucoRoom);
 gameServer.define('chess', ChessRoom);
 gameServer.define('checkers', CheckersRoom);
 gameServer.define('trivia', TriviaRoom);
+gameServer.define('pingpong', PingPongRoom);
 
 // Listen
 gameServer.listen(port).then(() => {

@@ -10,7 +10,7 @@ const GAMES = [
   { id: "autos", name: "Carreras 3D", active: false, color: "from-red-500 to-orange-600", icon: "🏎️", players: "-" },
   { id: "damas", name: "Damas", active: true, color: "from-amber-600 to-red-800", icon: "🔴", players: "120" },
   { id: "penales", name: "Penales", active: false, color: "from-sky-400 to-blue-600", icon: "⚽", players: "-" },
-  { id: "pingpong", name: "Ping Pong", active: false, color: "from-cyan-500 to-teal-600", icon: "🏓", players: "-" },
+  { id: "pingpong", name: "Ping Pong", active: true, color: "from-cyan-500 to-teal-600", icon: "🏓", players: "350" },
   { id: "memoria", name: "Memoria", active: false, color: "from-fuchsia-500 to-purple-600", icon: "🧩", players: "-" },
 ];
 
@@ -86,8 +86,8 @@ export default function ArcadeWorldHub() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {GAMES.map((game) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {GAMES.filter(g => g.active).map((game) => (
               <div 
                 key={game.id} 
                 className={`relative overflow-hidden rounded-2xl p-6 transition duration-300 ${
@@ -124,6 +124,9 @@ export default function ArcadeWorldHub() {
                 )}
                 {game.id === 'trivia' && (
                   <Link href="/trivia" className="absolute inset-0 z-10"></Link>
+                )}
+                {game.id === 'pingpong' && (
+                  <Link href="/pingpong" className="absolute inset-0 z-10"></Link>
                 )}
               </div>
             ))}
