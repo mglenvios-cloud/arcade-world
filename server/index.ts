@@ -11,6 +11,7 @@ import { ChessRoom } from "./rooms/ChessRoom";
 import { CheckersRoom } from "./rooms/CheckersRoom";
 import { TriviaRoom } from "./rooms/TriviaRoom";
 import { PingPongRoom } from "./rooms/PingPongRoom";
+import { MemoryRoom } from "./rooms/MemoryRoom";
 
 const port = Number(process.env.PORT || 2567);
 const app = express();
@@ -33,6 +34,7 @@ gameServer.define('chess', ChessRoom);
 gameServer.define('checkers', CheckersRoom);
 gameServer.define('trivia', TriviaRoom);
 gameServer.define('pingpong', PingPongRoom);
+gameServer.define('memory', MemoryRoom);
 
 // Listen
 gameServer.listen(port).then(() => {

@@ -11,7 +11,7 @@ const GAMES = [
   { id: "damas", name: "Damas", active: true, color: "from-amber-600 to-red-800", icon: "🔴", players: "120" },
   { id: "penales", name: "Penales", active: false, color: "from-sky-400 to-blue-600", icon: "⚽", players: "-" },
   { id: "pingpong", name: "Ping Pong", active: true, color: "from-cyan-500 to-teal-600", icon: "🏓", players: "350" },
-  { id: "memoria", name: "Memoria", active: false, color: "from-fuchsia-500 to-purple-600", icon: "🧩", players: "-" },
+  { id: "memoria", name: "Memoria", active: true, color: "from-fuchsia-500 to-purple-600", icon: "🧩", players: "410" },
 ];
 
 const FRIENDS = [
@@ -127,6 +127,9 @@ export default function ArcadeWorldHub() {
                 )}
                 {game.id === 'pingpong' && (
                   <Link href="/pingpong" className="absolute inset-0 z-10"></Link>
+                )}
+                {game.id === 'memoria' && (
+                  <Link href="/memoria" className="absolute inset-0 z-10"></Link>
                 )}
               </div>
             ))}
