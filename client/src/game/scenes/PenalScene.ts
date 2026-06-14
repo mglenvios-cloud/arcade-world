@@ -96,7 +96,7 @@ export class PenalScene extends Phaser.Scene {
                     this.resultText.setAlpha(0);
 
                     // Actualizar scores
-                    const playersArray = [];
+                    const playersArray: any[] = [];
                     state.players.forEach((p: any) => playersArray.push(p));
                     if(playersArray.length === 2) {
                         this.scoreText.setText(`${playersArray[0].score} - ${playersArray[1].score}`);
