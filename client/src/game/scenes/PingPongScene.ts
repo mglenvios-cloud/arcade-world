@@ -20,7 +20,7 @@ export class PingPongScene extends Phaser.Scene {
 
     create() {
         // Línea central
-        this.add.line(400, 400, 0, -400, 0, 400, 0x333333).setLineWidth(4).setStrokeStyle(4, 0x333333, 1, 10);
+        this.add.line(400, 400, 0, -400, 0, 400, 0x333333).setLineWidth(4).setStrokeStyle(4, 0x333333, 1);
         
         this.statusText = this.add.text(400, 30, "Conectando...", {
             fontSize: "20px", color: "#00ffff", fontFamily: "monospace"
@@ -72,7 +72,7 @@ export class PingPongScene extends Phaser.Scene {
                 this.ballGraphics.setPosition(state.ball.x, state.ball.y);
 
                 // Actualizar Paletas y Score
-                const playersArray = [];
+                const playersArray: any[] = [];
                 state.players.forEach((p: any, sessionId: string) => {
                     playersArray.push(p);
                 });

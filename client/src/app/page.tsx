@@ -9,7 +9,7 @@ const GAMES = [
   { id: "trivia", name: "Trivia Quiz", active: true, color: "from-purple-500 to-pink-600", icon: "🧠", players: "800" },
   { id: "autos", name: "Carreras 3D", active: false, color: "from-red-500 to-orange-600", icon: "🏎️", players: "-" },
   { id: "damas", name: "Damas", active: true, color: "from-amber-600 to-red-800", icon: "🔴", players: "120" },
-  { id: "penales", name: "Penales", active: false, color: "from-sky-400 to-blue-600", icon: "⚽", players: "-" },
+  { id: "penales", name: "Penales", active: true, color: "from-sky-400 to-blue-600", icon: "⚽", players: "500" },
   { id: "pingpong", name: "Ping Pong", active: true, color: "from-cyan-500 to-teal-600", icon: "🏓", players: "350" },
   { id: "memoria", name: "Memoria", active: true, color: "from-fuchsia-500 to-purple-600", icon: "🧩", players: "410" },
 ];
@@ -130,6 +130,9 @@ export default function ArcadeWorldHub() {
                 )}
                 {game.id === 'memoria' && (
                   <Link href="/memoria" className="absolute inset-0 z-10"></Link>
+                )}
+                {game.id === 'penales' && (
+                  <Link href="/penales" className="absolute inset-0 z-10"></Link>
                 )}
               </div>
             ))}
