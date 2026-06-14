@@ -12,6 +12,8 @@ import { CheckersRoom } from "./rooms/CheckersRoom";
 import { TriviaRoom } from "./rooms/TriviaRoom";
 import { PingPongRoom } from "./rooms/PingPongRoom";
 import { MemoryRoom } from "./rooms/MemoryRoom";
+import { PenalRoom } from "./rooms/PenalRoom";
+import { RacingRoom } from "./rooms/RacingRoom";
 
 const port = Number(process.env.PORT || 2567);
 const app = express();
@@ -35,6 +37,8 @@ gameServer.define('checkers', CheckersRoom);
 gameServer.define('trivia', TriviaRoom);
 gameServer.define('pingpong', PingPongRoom);
 gameServer.define('memory', MemoryRoom);
+gameServer.define('penales', PenalRoom);
+gameServer.define('racing', RacingRoom);
 
 // Listen
 gameServer.listen(port).then(() => {

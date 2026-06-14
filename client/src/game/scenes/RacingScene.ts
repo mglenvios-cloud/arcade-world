@@ -21,7 +21,7 @@ export class RacingScene extends Phaser.Scene {
         this.physics.world.setBounds(0, 0, 2000, 2000);
         
         // Dibujar cuadricula de fondo para notar el movimiento
-        this.add.grid(1000, 1000, 2000, 2000, 100, 100, 0x333333).setAltFillStyle(0x2b2b2b).setOutlineStyle();
+        this.add.grid(1000, 1000, 2000, 2000, 100, 100, 0x333333).setAltFillStyle(0x2b2b2b);
 
         // UI Fija en pantalla
         this.statusText = this.add.text(400, 30, "Conectando...", { fontSize: "20px", color: "#ffffff" })
